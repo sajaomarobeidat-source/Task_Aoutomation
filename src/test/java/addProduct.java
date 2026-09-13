@@ -11,7 +11,7 @@ public class addProduct
     @Test
     public void addProducts(){
         new P01_LoginPgae(driver).login(data.getTestData("userNmae"), data.getTestData("password"))
-                .NavigateProducts();
+                .NavigateProducts().addProducts().productVerfication();
     }
     @BeforeClass
     public void setUP(){
@@ -21,6 +21,6 @@ public class addProduct
     }
     @AfterClass
     public void tearDown(){
-        driver.quit();
+        //driver.quit();
     }
 }
